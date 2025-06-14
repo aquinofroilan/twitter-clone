@@ -1,5 +1,5 @@
 import LoginForm from "@/components/features/auth/login-form";
-import { Card, CardAction, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui";
 
 function LoginPage() {
     return (
@@ -12,9 +12,6 @@ function LoginPage() {
                 <CardContent>
                     <LoginForm />
                 </CardContent>
-                <CardFooter>
-                    <CardAction>Submit</CardAction>
-                </CardFooter>
             </Card>
         </main>
     );
