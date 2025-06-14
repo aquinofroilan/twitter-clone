@@ -1,9 +1,10 @@
-import { EmailSchema } from "../base-schema";
+import { EmailSchema } from "@/schemas";
 import { z } from "zod";
 
 const LoginSchema = z.object({
-    email: EmailSchema,
+    email: EmailSchema.nonempty("Email is required"),
     password: z.string().min(8, "Password must be at least 8 characters long"),
 });
 
-export default LoginSchema;
+export { LoginSchema };
+export type LoginSchemaType = z.infer<typeof LoginSchema>;

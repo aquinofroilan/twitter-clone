@@ -1,25 +1,19 @@
-import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { z } from "zod";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
-
-const SignUpSchema = z
-    .object({
-        firstName: z.string().min(1, "First name is required"),
-        lastName: z.string().min(1, "Last name is required"),
-        email: z.string().email("Invalid email address").min(1, "Email is required"),
-        password: z.string().min(8, "Password must be at least 8 characters long"),
-        confirmPassword: z.string().min(8, "Confirm password must be at least 8 characters long"),
-    })
-    .refine((data) => data.password === data.confirmPassword, {
-        message: "Passwords do not match",
-        path: ["confirmPassword"],
-    });
+import {
+    Input,
+    Button,
+    Form,
+    FormControl,
+    FormDescription,
+    FormField,
+    FormItem,
+    FormLabel,
+    FormMessage,
+} from "@/components/ui";
+import { SignUpSchema, type SignUpSchemaType } from "@/schemas";
 
 function SignUpForm() {
-    type SignUpSchemaType = z.infer<typeof SignUpSchema>;
     const signUpForm = useForm({
         defaultValues: {
             firstName: "",
