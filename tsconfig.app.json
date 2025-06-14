@@ -25,7 +25,10 @@
         /* Path aliases */
         "baseUrl": ".",
         "paths": {
-            "@/*": ["./src/*"]
+            "@/*": ["./src/*"],
+            "@lib/*": ["./lib/*"],
+            "@/schema": ["./schema"], // Add this line
+            "@/schema/*": ["./schema/*"]
         }
     },
 
