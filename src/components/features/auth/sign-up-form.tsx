@@ -32,7 +32,7 @@ function SignUpForm() {
     const { control, handleSubmit } = signUpForm;
     const onSubmit = (data: SignUpSchemaType) => {
         console.log("Form submitted with data:", data);
-        // Handle sign-up logic here
+        // TODO: Handle sign-up logic here, add async check for email existense on the database
     };
     return (
         <Form {...signUpForm}>
