@@ -26,7 +26,9 @@
         "baseUrl": ".",
         "paths": {
             "@/*": ["./src/*"],
-            "@lib/*": ["./lib/*"]
+            "@lib/*": ["./lib/*"],
+            "@/schema": ["./schema"], // Add this line
+            "@/schema/*": ["./schema/*"]
         }
     },
 

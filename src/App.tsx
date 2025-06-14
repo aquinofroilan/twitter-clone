@@ -1,7 +1,7 @@
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
-import LoginForm from "./components/features/auth/LoginForm";
+import LoginForm from "./components/features/auth/login-form";
 
 function App() {
     return (
