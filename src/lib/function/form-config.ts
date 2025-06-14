@@ -1,4 +1,4 @@
-import { UseFormProps, FieldValues } from "react-hook-form";
+import type { UseFormProps, FieldValues } from "react-hook-form";
 
 /**
  * Generic-safe default config with weak typing.

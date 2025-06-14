@@ -22,15 +22,15 @@
         "erasableSyntaxOnly": true,
         "noFallthroughCasesInSwitch": true,
         "noUncheckedSideEffectImports": true,
+
         /* Path aliases */
         "baseUrl": ".",
         "paths": {
             "@/*": ["./src/*"],
-            "@lib/*": ["./lib/*"],
-            "@/schema": ["./schema"], // Add this line
-            "@/schema/*": ["./schema/*"]
+            "@/schemas": ["src/schemas"],
+            "@/schemas/*": ["src/schemas/*"]
         }
     },
 
-    "include": ["src"]
+    "include": ["src", "schemas"]
 }

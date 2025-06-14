@@ -9,8 +9,8 @@
         "paths": {
             "@/*": ["./src/*"],
             "@lib/*": ["./lib/*"],
-            "@/schema": ["./schema"],
-            "@/schema/*": ["./schema/*"]
+            "@/schemas": ["src/schemas"],
+            "@/schemas/*": ["src/schemas/*"]
         }
     }
 }
