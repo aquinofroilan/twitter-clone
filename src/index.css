@@ -1,14 +1,13 @@
 @import "tailwindcss";
 @import "tw-animate-css";
-@import "./inter.css";
 
 @custom-variant dark (&:is(.dark *));
 
-@supports (font-variation-settings: normal) {
-    :root {
-        font-family: "InterVariable", sans-serif;
-        font-optical-sizing: auto;
-    }
+.inter-font {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400 500 600 700;
+    font-style: normal;
 }
 
 :root {

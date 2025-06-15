@@ -1,10 +1,17 @@
-import { StrictMode } from "react";
+import { lazy, StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./index.css";
 import App from "./App.tsx";
-import { HomeFeed, ProfilePage, LoginPage, PeoplePage, ExplorePage, SettingsPage, SignUpPage } from "@/routes";
-import DashboardLayout from "@/layouts/dashboard-layout.tsx";
+
+const DashboardLayout = lazy(() => import("@/layouts/dashboard-layout"));
+const HomeFeed = lazy(() => import("@/routes/pages/home/feed"));
+const ProfilePage = lazy(() => import("@/routes/pages/home/profile"));
+const LoginPage = lazy(() => import("@/routes/pages/auth/sign-in"));
+const PeoplePage = lazy(() => import("@/routes/pages/home/people"));
+const ExplorePage = lazy(() => import("@/routes/pages/home/explore"));
+const SettingsPage = lazy(() => import("@/routes/pages/home/settings"));
+const SignUpPage = lazy(() => import("@/routes/pages/auth/sign-up"));
 
 createRoot(document.getElementById("root")!).render(
     <StrictMode>
