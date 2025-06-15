@@ -8,36 +8,26 @@ import { IoSearch } from "react-icons/io5";
 const NavBar = () => {
     return (
         <nav className="flex justify-between gap-5">
-            <div className="flex justify-center items-center gap-3 flex-col">
+            <Link className="flex justify-center items-center gap-3 flex-col" to="/u/home">
                 <HiHome size={24} />
-                <Link className="text-black" to="/u/home">
-                    Home
-                </Link>
-            </div>
-            <div className="flex justify-center items-center gap-3 flex-col">
+                <span>Home</span>
+            </Link>
+            <Link className="flex justify-center items-center gap-3 flex-col" to="/u/people">
                 <BsPeopleFill size={24} />
-                <Link className="text-black" to="/u/people">
-                    People
-                </Link>
-            </div>
-            <div className="flex justify-center items-center gap-3 flex-col">
+                <span>People</span>
+            </Link>
+            <Link className="flex justify-center items-center gap-3 flex-col" to="/u/explore">
                 <IoSearch size={24} />
-                <Link className="text-black" to="/u/explore">
-                    Explore
-                </Link>
-            </div>
-            <div className="flex justify-center items-center gap-3 flex-col">
+                <span>Explore</span>
+            </Link>
+            <Link className="flex justify-center items-center gap-3 flex-col" to="/u/settings">
                 <IoMdSettings size={24} />
-                <Link className="text-black" to="/u/settings">
-                    Settings
-                </Link>
-            </div>
-            <div className="flex justify-center items-center gap-3 flex-col">
+                <span>Settings</span>
+            </Link>
+            <Link className="flex justify-center items-center gap-3 flex-col" to="/u/profile">
                 <IoPersonCircleOutline size={24} />
-                <Link className="text-black" to="/u/profile">
-                    Profile
-                </Link>
-            </div>
+                <span>Profile</span>
+            </Link>
         </nav>
     );
 };
