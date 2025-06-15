@@ -3,12 +3,12 @@ import { Outlet } from "react-router-dom";
 
 const DashboardLayout = () => {
     return (
-        <>
-            <main style={{ padding: "1rem" }}>
+        <main>
+            <section style={{ padding: "1rem" }}>
                 <Outlet />
-            </main>
+            </section>
             <NavBar />
-        </>
+        </main>
     );
 };
 
