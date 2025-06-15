@@ -3,8 +3,8 @@ import { Outlet } from "react-router-dom";
 
 const DashboardLayout = () => {
     return (
-        <main>
-            <section style={{ padding: "1rem" }}>
+        <main className="h-screen w-full relative">
+            <section>
                 <Outlet />
             </section>
             <NavBar />
